@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Library Form</title>
+</head>
+<body>
+    
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/logo.png">
+            </div>
+            <ul class="nav-item">
+                <li><a href="index.html">Books</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <img src="img/background.jpg">
+    <div class="container">
+        <Label class="heading">
+            <p> Library Book Form </p>
+            <h3 style="margin: 35px 15px; ">Add new book Details</h3>
+        </Label>
+        <form id="form" class="form" onsubmit="return validateform()">
+            <label for="category">Category</label>
+            <select id="category"">
+                        <option value=" IT">IT</option>
+                <option value="CSE">CSE</option>
+                <option value="EEE">EEE</option>
+                <option value="MCA">MCA</option>
+            </select>
+
+            <div class="form-control">
+                <label for="book"> Book </label>
+                <input type="text" name="book" id="book" onkeyup=validatebook()>
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="email"> Author Email </label>
+                <input type="text" id="email"onkeyup=validateemail()>
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="authorname"> Author Name </label>
+                <input type="text" id="authorname"onkeyup=validatename()>
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+                <label for="published"> Published </label>
+                <input type="text" id="published"onkeyup=validatepublish()>
+                <small>Error Message</small>
+            </div>
+            <div class="form-control">
+
+                <label for="price"> Price </label>
+                <input type="text" id="price"onkeyup=validateprice()>
+                <small>Error Message</small>
+            </div>
+            <div class="submitbutton">
+                <button type="submit" class="submit" >Submit</button>
+                <button type="reset" class="cancel">Cancel</button>
+                <button type="button" class="show" onclick=status()> Show</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+<br>
+<footer>
+    <p id="foot">Copyright @2019 - present Syncfusion</p>
+</footer>
+<script type="text/javascript" src="script/script.js"></script>
+
+</html>
